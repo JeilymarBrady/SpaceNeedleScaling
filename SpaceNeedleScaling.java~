@@ -1,0 +1,120 @@
+/*
+Name:  Jeilymar Brady
+Assignment:   5
+Title: SpaceNeedle
+Course: CSCE144 
+Section: 1 - Hauser
+Lab Section: 2 - Hauser
+Semester: Spring 2014 
+Instructor: Hauser
+Date: 13 March 2014
+Sources consulted:   
+Known Bugs: none
+Program Description: 
+Creativity: 
+Instructions: javac SpaceNeedle.java then java SpaceNeedle 
+*/
+
+public class SpaceNeedleScaling
+{
+   public static void main(String[] args) 
+   {
+   	
+   	   //int indent, scale ;
+   	   //int indent = 5, scale = 2 ;
+   	   drawNeedle() ; //drawNeedle(indent, scale) ;
+   	   drawTop() ;
+   	   drawBar() ;
+   	   drawBottom() ;
+   	   drawNeedle() ;
+   	   drawColumn() ;
+   	   drawTop() ;
+   	   drawBar() ;
+   	}
+   
+   	public static void drawNeedle() { //(int indentation, int scaling) {
+	//for ( int i = 0; i < scaling; i++) { 
+		//for( int k = 0; k < indentation; k++ ) {
+				//System.out.println("     ") ;
+			//}
+   		for ( int i = 0; i < 4; i++) {
+			for ( int j = 0; j < 12; j++) { //j < (3 * scaling)
+				System.out.print(" ") ;
+			}
+		System.out.print("||") ;
+		System.out.println() ;
+		}	
+	
+	
+	//}
+	}
+	
+	public static void drawTop() { //(int indentation, int scaling) {
+	int spaceCount = 9;
+	int colonCount = 0;
+		for ( int i = 0; i < 4; i++) {
+			//for( int k = 0; k < indentation; k++ ) {
+				//System.out.println("     ") ;
+			//}
+				for ( int j = 0; j < spaceCount; j++) {
+					System.out.print(" ") ;
+				}
+			System.out.print("__/") ;
+				for ( int j = 0; j < colonCount; j++) {
+						System.out.print(":") ;
+				}
+				System.out.print("||") ;
+					for ( int j = 0; j < colonCount; j++) {
+						System.out.print(":") ;
+					}
+				System.out.print("\\__") ;
+				System.out.println() ;
+				spaceCount = spaceCount - 3 ;
+				colonCount = colonCount + 3 ;
+		}
+	}
+	
+	public static void drawBar() {
+	System.out.print("|") ;
+		for ( int j = 0; j < 24; j++) {
+			System.out.print("\"") ;
+		}
+	System.out.print("|") ;
+	System.out.println() ;
+	
+	
+	}
+	
+	public static void drawBottom() {
+	int spaceCount2 = 0 ;
+	int capCount = 11 ;
+		for ( int i = 0; i < 4; i++) {
+			for ( int j = 0; j < spaceCount2; j++) {
+					System.out.print(" ") ;
+				}
+		System.out.print("\\_") ;
+			for ( int j = 0; j < capCount; j++) {
+					System.out.print("/\\") ;
+				}
+		System.out.print("_/") ;
+		System.out.println() ;
+		spaceCount2 = spaceCount2 + 2 ;
+		capCount = capCount - 2;
+	
+			
+		}
+	}
+	
+	public static void drawColumn() {
+	for ( int i = 0; i < 16; i++) {
+		for ( int j = 0; j < 9; j++) {
+					System.out.print(" ") ;
+				}
+		System.out.print("|%%||%%|") ;
+		System.out.println() ;
+		
+		}
+	}
+	
+}
+
